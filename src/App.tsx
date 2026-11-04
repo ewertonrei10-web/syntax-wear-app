@@ -1,11 +1,11 @@
+import { Header } from "./components/Header";
 
 function App() {
-
   return (
     <>
-      <p className="bg-error">gaROTO </p>
+      <Header />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
