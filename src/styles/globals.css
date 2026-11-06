@@ -56,3 +56,11 @@
 body {
     font-family: var(--font-display); 
 }
+
+.scrolbar-hidde::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hidde {
+    scrollbar-width: none;
+}
