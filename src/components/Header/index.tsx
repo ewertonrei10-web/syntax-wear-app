@@ -1,0 +1,52 @@
+import Logo from "@/assets/hero.png";
+import IconUser from "@/assets/images/icon-user.png";
+import IconAbout from "@/assets/images/icon-about.png";
+import IconCart from "@/assets/images/icon-cart.png";
+
+export const Header = () => {
+  return (
+    <div className="relative">
+      <header className="fixed bg-amber-600 top-0 left-0 right-0 z-10 mx-0">
+        <div className="bg-white max-w-[1320px] mx-auto flex justify-between items-center py-5 px-7 rounded-2xl mt-5">
+          <img src={Logo} alt="Logo Syntaxwear" className="w-32 md:w-36"/>
+
+          <nav className="hidden md:block">
+            <ul className="flex gap-10">
+              <li>
+                <a href="#">Masculino</a>
+              </li>
+              <li>
+                <a href="#">Feminino</a>
+              </li>
+              <li>
+                <a href="#">Outlet</a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav>
+            <ul className="flex gap-4 md:gap-10">
+              <li className="hidden md:block">
+                <a href="#">Nossas Lojas</a>
+              </li>
+              <li className="hidden md:block">
+                <a href="#">Sobre</a>
+              </li>
+              <li className="hidden md:block">
+                <a href="#">
+                  <img src={IconUser} alt="icone de login" />
+                </a>
+              </li>
+              <li>
+                <img src={IconAbout} alt="Icone de Sobre" />
+              </li>
+              <li>
+                <img src={IconCart} alt="icone de carrinho" />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+  );
+};
