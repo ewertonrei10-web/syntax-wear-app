@@ -5,6 +5,7 @@ import homem from "@/assets/images/galeria-homen.jpg";
 import modelo from "@/assets/images/galeria-modelo.jpg";
 import tenisRoxo from "@/assets/images/galeria-tenis-roxo.jpg";
 import { Button } from "../Button";
+import { Overlay } from "../Overlay";
 
 export const Gallery = () => {
   return (
@@ -15,18 +16,14 @@ export const Gallery = () => {
           alt="Modelo masculino usando tênis SyntaxWear"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/10 text-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
-          <h2 className="text-xl font-medium tracking-wider">Krypton One</h2>
-          <p className="text-xl tracking-widest">Estilo urbano com atitude</p>
-          <div className="mt-4 flex gap-2.5">
-            <Button variant="secondary" size="sm">
-              Feminino
-            </Button>
-            <Button variant="secondary" size="sm">
-              Masculino
-            </Button>
-          </div>
-        </div>
+        <Overlay
+          title="Krypton One"
+          subtitle="Estilo urbano"
+          className="inset-0 justify-center"
+        >
+          <Button variant="secondary">Feminino</Button>
+          <Button variant="secondary">Masculino</Button>
+        </Overlay>
       </div>
       <img
         src={tenisBrancoEPreto}
