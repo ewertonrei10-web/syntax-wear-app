@@ -13,17 +13,18 @@ const categories = [
 
 export const Categories = () => {
   return (
-    <section className="container flex lg:grid lg:grid-cols-4 lg:gap-4 mb-10 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+    <section className="container flex gap-4 lg:grid lg:grid-cols-4 mb-10 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
       {categories.map((category, index) => (
         <div
           key={index}
           style={{ backgroundImage: `url(${category.image})` }}
-          className="h-125 bg-cover bg-center rounded-[20px] relative flex items-center justify-center text-white shrink-0 w-[95%] md:w-1/2 lg:w-full"
+          className="h-125 bg-cover bg-center rounded-[20px] relative flex items-center justify-center text-white shrink-0 w-[95%] snap-center md:w-1/2 lg:w-full"
         >
-          <div className="absolute inset-0 bg-black/35 snap-center"></div>
-          <div className="realtive">
-            <Button variant="secondary" />
-            {category.name}
+          <div className="pointer-events-none absolute inset-0 rounded-[20px] bg-black/35"></div>
+          <div className="relative z-10">
+            <Button variant="secondary">
+              {category.name}
+            </Button>
           </div>
         </div>
       ))}
